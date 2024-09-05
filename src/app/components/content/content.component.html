@@ -1,0 +1,8 @@
+<div class="photo">
+    <div [ngClass]="classContainer">
+        @for (item of images; track i;let i= $index) {
+        <img (click)="onClick(item,i)" src={{item}}>
+        }
+    </div>
+    <span class="caption">{{title}}</span>
+</div>

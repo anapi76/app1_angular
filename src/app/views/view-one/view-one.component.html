@@ -1,0 +1,9 @@
+@if(test){
+    @for (item of data; track item; let i=$index) {
+        <app-content (data)='onClick($event)' [images]="item.images" [title]="item.title"
+        [classContainer]="classContainer"></app-content>
+    }
+}
+@else {
+    <app-content (data)='onClick($event)' [images]="images" [title]="title" [classContainer]="classContainer"></app-content>
+}

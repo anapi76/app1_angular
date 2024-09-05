@@ -1,0 +1,17 @@
+<div class="navigation">
+    <ul>
+        @for (view of data; track view; let i=$index) {
+        <a (click)="onClick(i)" routerLink={{view.view}} routerLinkActive="active"
+            [ngClass]="data[i].classTitle[j]">{{view.title}} </a>
+        }
+    </ul>
+</div>
+
+<div class="banner" [ngStyle]="{'backgroundImage':image}">
+    <div class="banner-text">
+        <h2>{{titleBanner}}</h2>
+    </div>
+</div>
+
+<div class="content">
+</div>
